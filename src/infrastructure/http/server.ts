@@ -1,10 +1,10 @@
-import Fastify, { FastifyInstance, FastifyRequest } from "fastify";
-import { nanoid } from "nanoid";
-import helmet from "fastify-helmet";
-import cors from "fastify-cors";
-import usersRoutes from "./routes/users";
-import { setCommonHandlers } from "./common/setCommonHandlers";
-import { setOnRequestHook } from "./common/hooks/onRequest";
+import Fastify, {FastifyInstance, FastifyRequest} from 'fastify';
+import {nanoid} from 'nanoid';
+import helmet from 'fastify-helmet';
+import cors from 'fastify-cors';
+import usersRoutes from './routes/users';
+import {setCommonHandlers} from './common/setCommonHandlers';
+import {setOnRequestHook} from './common/hooks/onRequest';
 
 const server: FastifyInstance = Fastify({
   logger: true,
@@ -15,9 +15,9 @@ const server: FastifyInstance = Fastify({
 setOnRequestHook(server);
 setCommonHandlers(server);
 
-server.register(helmet, { contentSecurityPolicy: false });
-server.register(cors, { credentials: true });
-server.register(usersRoutes, { prefix: "api/users" });
+server.register(helmet, {contentSecurityPolicy: false});
+server.register(cors, {credentials: true});
+server.register(usersRoutes, {prefix: 'api/users'});
 
 const start = async () => {
   try {
