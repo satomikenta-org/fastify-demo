@@ -16,10 +16,15 @@
   "dependencies": {
     "@types/node": "^16.3.3",
     "fastify": "^3.19.1",
+    "fastify-cors": "^6.0.2",
+    "fastify-helmet": "^5.3.2",
+    "fastify-swagger": "^4.8.3",
+    "nanoid": "^3.1.23",
     "ts-node": "^10.1.0"
   },
   "devDependencies": {
     "@types/jest": "^26.0.24",
+    "@types/pino": "^6.3.9",
     "husky": "^7.0.0",
     "jest": "^27.0.6",
     "nodemon": "^2.0.12",
