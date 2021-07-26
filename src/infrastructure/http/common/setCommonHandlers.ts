@@ -21,6 +21,6 @@ export function setCommonHandlers(server: FastifyInstance) {
   });
 
   server.setNotFoundHandler((_: FastifyRequest, reply: FastifyReply) => {
-    reply.status(404).send('Not Found');
+    reply.notFound();
   });
 }
