@@ -44,8 +44,7 @@ server.register(usersRoutes, { prefix: 'api/users' });
 
 const start = async () => {
   try {
-    await server.listen(3000);
-    console.log(server.printRoutes());
+    await server.listen(3000, '0.0.0.0'); // '0.0.0.0' is required if you wanna run fastify inside docker.
   } catch (err) {
     server.log.error(err);
     process.exit(1);
