@@ -1,6 +1,12 @@
-import { expect } from "@jest/globals";
-import { testFn } from "./reservation";
+import { expect } from '@jest/globals';
+import { testFn } from './reservation';
 
-test("double 1 equal to 2", () => {
-  expect(testFn(1)).toBe(2);
-});
+const integerNumbers = [
+  [-1, -2],
+  [0, 0],
+  [3, 6],
+];
+
+test.each(integerNumbers)('double passes for integer value %j with result %j', (fixture, result) =>
+  expect(testFn(fixture)).toBe(result)
+);
