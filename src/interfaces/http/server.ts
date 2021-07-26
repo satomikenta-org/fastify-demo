@@ -39,6 +39,7 @@ server.register(fastifySwagger, {
 server.register(sensible);
 server.register(helmet, { contentSecurityPolicy: false });
 server.register(cors, { credentials: true });
+
 server.register(usersRoutes, { prefix: 'api/users' });
 
 const start = async () => {

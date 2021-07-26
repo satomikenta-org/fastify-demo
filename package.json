@@ -9,7 +9,7 @@
     "test": "npm run build && jest --config=jest.config.js",
     "dev": "nodemon --config nodemon.json",
     "build": "tsc -p tsconfig.json",
-    "start": "node dist/infrastructure/http/server.js",
+    "start": "node dist/interfaces/http/server.js",
     "prepare": "husky install"
   },
   "keywords": [],
