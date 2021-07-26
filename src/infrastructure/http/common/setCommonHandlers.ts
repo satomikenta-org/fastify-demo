@@ -3,7 +3,6 @@ import { FastifyError, FastifyInstance, FastifyReply, FastifyRequest } from 'fas
 export function setCommonHandlers(server: FastifyInstance) {
   server.setErrorHandler((error: FastifyError, request: FastifyRequest, reply: FastifyReply) => {
     let { statusCode, message } = error;
-
     if (!statusCode) statusCode = 500;
 
     if (statusCode < 500) {
